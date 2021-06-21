@@ -6,6 +6,12 @@
 4. User can view the results of a question
 5. User can logout
 
+# Installation
+Clone or download the project
+Run npm install in the project root directory to install dependencies
+Run npm start to launch the project
+The project will run on http://localhost:3000
+
 # Specifications
 This project is built through react, redux, html, css and javascript.
 
