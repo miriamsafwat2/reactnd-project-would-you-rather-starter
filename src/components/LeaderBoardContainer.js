@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import BackButton from "./BackButton";
 import LeaderBoard from "./LeaderBoard";
+import NavigationBar from "./NavigationBar";
 
 class LeaderBoardContainer extends Component {
   render() {
+    
       const {users, usersId} = this.props;
       // sort ids according to total number of score
       let scores = [];
@@ -24,6 +26,7 @@ class LeaderBoardContainer extends Component {
         console.log("ARRAY SCCORE SORTED: ", scores);
     return (
       <div>
+        <NavigationBar />
         <ul>
           {scores.map((id) => (
             <li key={id["id"][1]}>

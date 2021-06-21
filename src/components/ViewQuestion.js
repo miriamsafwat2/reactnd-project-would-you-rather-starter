@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import BackButton from "./BackButton";
+import NavigationBar from "./NavigationBar";
 
 class ViewQuestion extends Component {
 
@@ -15,6 +16,7 @@ class ViewQuestion extends Component {
     : ((votesTwo / (votesOne + votesTwo)) * 100);
       return (
         <div>
+          <NavigationBar />
           <h1>View Question</h1>
           {/*<h3>ID is:{id}</h3>*/}
           <h3>Results:</h3>

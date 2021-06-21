@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { handleSaveAnswer } from "../actions/shared";
 import BackButton from "./BackButton";
 import { Redirect } from "react-router-dom";
+import NavigationBar from "./NavigationBar";
 
 class AnswerQuestion extends Component {
   state = {
@@ -49,6 +50,7 @@ class AnswerQuestion extends Component {
     }
     return (
       <div>
+        <NavigationBar />
         <h1>Answer Question</h1>
         <h3>ID is:{id}</h3>
         <p>Would you rather:</p>
