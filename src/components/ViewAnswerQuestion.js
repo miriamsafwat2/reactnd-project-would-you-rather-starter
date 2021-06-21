@@ -9,7 +9,7 @@ class ViewAnswerQuestion extends Component {
 
   render() {
     const {id, question, user} = this.props;
-    if(question === null){
+    if(!question){
         return <Redirect to="/notfound" />;
     }
 
