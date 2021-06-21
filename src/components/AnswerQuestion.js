@@ -13,7 +13,7 @@ class AnswerQuestion extends Component {
     e.preventDefault();
     const authedUser = this.props.authedUser;
     console.log("AUTHED: ", authedUser);
-    const { id } = this.props.match.params;
+    const { id } = this.props;//this.props.match.params;
     const qid = id;
     console.log("QID: ", qid);
 
@@ -28,7 +28,7 @@ class AnswerQuestion extends Component {
     e.preventDefault();
     const authedUser = this.props.authedUser;
     console.log("AUTHED: ", authedUser);
-    const { id } = this.props.match.params;
+    const { id } = this.props; //this.props.match.params;
     const qid = id;
     console.log("QID: ", qid);
 
@@ -40,17 +40,16 @@ class AnswerQuestion extends Component {
   };
 
   render() {
+  console.log("this.state.viewResult: ", this.state.viewResult);
        
-    const { id } = this.props.match.params;
-    const { question } = this.props;
+    const { id, question } = this.props;//this.props.match.params;
 
     if (this.state.viewResult) {
-        const url = `/questions/${id}`;
-        return <Redirect to={url} />;
+        //const url = `/questions/${id}`;
+        //return <Redirect to={url} />;
     }
     return (
       <div>
-        <NavigationBar />
         <h1>Answer Question</h1>
         <h3>ID is:{id}</h3>
         <p>Would you rather:</p>
@@ -67,8 +66,10 @@ class AnswerQuestion extends Component {
   }
 }
 function mapStateToProps({ questions, authedUser, users }, props) {
-  const { id } = props.match.params;
+  const id = props.id;
+  //console.log("QUESTIONsss: ", questions);
   const question = questions[id];
+  console.log("QUESTION IN ANSWER_QUESTION: ", question)
   return {
     authedUser,
     question: question,

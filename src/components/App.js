@@ -8,7 +8,7 @@ import Login from "./Login";
 import LeaderBoardContainer from "./LeaderBoardContainer";
 import LoadingBar from "react-redux-loading";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import ViewQuestion from "./ViewQuestion";
+import ViewAnswerQuestion from "./ViewAnswerQuestion";
 import AnswerQuestion from "./AnswerQuestion";
 
 class App extends Component {
@@ -29,10 +29,10 @@ class App extends Component {
               <Route path="/home" component={Dashboard} />
               <Route path="/login" component={Login} />
               <Route path="/add" component={NewQuestion} />
-              <Route path="/questions/:id" component={ViewQuestion} />
-              <Route path="/answerquestion/:id" component={AnswerQuestion} />
+              <Route path="/questions/:id" component={ViewAnswerQuestion} />
               <Route path="/leaderboard" component={LeaderBoardContainer} />
               <Route path="*" component={NotFound} />
+              <Route path="/404" component={NotFound} />
               <Route component={NotFound} />
             </Switch>
           </Router>

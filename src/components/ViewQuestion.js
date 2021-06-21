@@ -6,7 +6,7 @@ import NavigationBar from "./NavigationBar";
 class ViewQuestion extends Component {
 
   render() {
-      const { id } = this.props.match.params;
+      const { id } = this.props;//this.props.match.params;
       const { question, users, authedUser} = this.props;
       const votesOne = question.optionOne["votes"].length;
       const votesTwo = question.optionTwo["votes"].length;
@@ -16,7 +16,6 @@ class ViewQuestion extends Component {
     : ((votesTwo / (votesOne + votesTwo)) * 100);
       return (
         <div>
-          <NavigationBar />
           <h1>View Question</h1>
           {/*<h3>ID is:{id}</h3>*/}
           <h3>Results:</h3>
@@ -46,7 +45,8 @@ class ViewQuestion extends Component {
       );}
 }
 function mapStateToProps({ questions, authedUser, users }, props) {
-  const { id } = props.match.params;
+  //props.match.params;
+  const id = props.id;
   const question = questions[id];
   return {
     authedUser,

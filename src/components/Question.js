@@ -22,13 +22,16 @@ class Question extends Component {
     const { question, users, id } = this.props;
 
     if (this.state.viewAnswerQuestion) {
+      const url = `/questions/${id}`;
+      return <Redirect to={url} />;
+      /*
       if(this.props.buttonName === 'Results'){
         const url = `/questions/${id}`
         return <Redirect to={url} />;
       }else{
         const url = `/answerquestion/${id}`;
         return <Redirect to={url} />;
-      }
+      }*/
     }
     return (
       <div className="card">
