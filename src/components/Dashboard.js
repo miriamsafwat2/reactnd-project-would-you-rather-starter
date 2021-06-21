@@ -33,11 +33,11 @@ class Dashboard extends Component {
         <NavigationBar />
         <h3>Logged in user: </h3>
         <p>{authedUser}</p>
-        <h3>Answered Questions: </h3>
-        <ul>{answered}</ul>
-
         <h3>Unanswered Questions: </h3>
         <ul>{unAnswered}</ul>
+        
+        <h3>Answered Questions: </h3>
+        <ul>{answered}</ul>
       </div>
     );
   }
